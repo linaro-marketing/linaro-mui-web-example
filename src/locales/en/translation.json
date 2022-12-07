@@ -1,0 +1,7 @@
+{
+	"site": {
+		"title": "Linaro MUI Web Example",
+		"tagline": "An example site for the linaro-mui-web component library.",
+		"description": "Linaro-mui-web provides out-of-the-box modern MUI-based web components."
+	}
+}

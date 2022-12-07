@@ -1,0 +1,18 @@
+{
+	"presets": ["next/babel"],
+	"plugins": ["styled-jsx/babel", ["styled-components", { "ssr": true }]],
+	"env": {
+		"test": {
+			"presets": ["@babel/preset-env", "@babel/react", "next/babel"]
+		},
+		"localhost": {
+			"presets": ["next/babel"]
+		},
+		"develop": {
+			"presets": ["next/babel"]
+		},
+		"main": {
+			"plugins": ["transform-remove-console"]
+		}
+	}
+}
