@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import i18n from '@i18n/init';
 import { Navbar, Seo } from '@linaro-marketing/linaro-mui-web';
 import React, { useEffect } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
