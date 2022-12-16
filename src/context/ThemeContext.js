@@ -13,8 +13,8 @@ const ThemeProvider = ({ children }) => {
 
 	const [themeMode, setThemeMode] = useLocalStorage('themeMode', isDarkOS ? 'light' : 'dark');
 	function setClassOnDocumentBody(mode) {
-		var classNameDark = 'dark';
-		var classNameLight = 'light';
+		let classNameDark = 'dark';
+		let classNameLight = 'light';
 		document.body.classList.add(mode === 'dark' ? classNameDark : classNameLight);
 		document.body.classList.remove(mode === 'dark' ? classNameLight : classNameDark);
 	}
