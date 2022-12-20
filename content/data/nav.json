@@ -11,49 +11,46 @@
 	"pages": [
 		{
 			"title": "Solutions",
-			"subMenus": [
-				{
-					"title": "Automotive, IoT & Edge Devices",
-					"pathname": "/automotive-iot-and-edge-devices/"
-				},
-				{
-					"title": "Client Devices",
-					"pathname": "/client-devices/"
-				},
-				{
-					"title": "Cloud Computing & Servers",
-					"pathname": "/cloud-computing-and-servers/"
-				},
-
-				{
-					"title": "Overview",
-					"pathname": "/core-technologies/"
-				},
-				{
-					"title": "Artificial Intelligence",
-					"pathname": "/core-technologies/artificial-intelligence/"
-				},
-				{
-					"title": "Linux Kernel",
-					"pathname": "/core-technologies/linux-kernel/"
-				},
-				{
-					"title": "Security",
-					"pathname": "/core-technologies/security/"
-				},
-				{
-					"title": "Testing & CI",
-					"pathname": "/core-technologies/testing-and-ci/"
-				},
-				{
-					"title": "Toolchain",
-					"pathname": "/core-technologies/toolchain/"
-				},
-				{
-					"title": "Virtualization",
-					"pathname": "/core-technologies/virtualization/"
-				}
-			]
+			"type": "megamenu",
+			"megaMenuContent": {
+				"sections": [
+					{
+						"title": "Core Technologies",
+						"options": [
+							{
+								"title": "Client Devices",
+								"description": "Client devices are the most common type of device in the world.",
+								"pathname": "/client-devices/"
+							},
+							{
+								"title": "Cloud Computing & Servers",
+								"description": "Cloud computing is the on-demand delivery of IT resources.",
+								"pathname": "/cloud-computing-and-servers/"
+							},
+							{
+								"title": "Servers",
+								"description": "Servers are the backbone of the cloud computing infrastructure.",
+								"pathname": "/client-devices/"
+							},
+							{
+								"title": "Client Devices",
+								"description": "Client devices are the most common type of device in the world.",
+								"pathname": "/client-devices/"
+							},
+							{
+								"title": "Cloud Computing & Servers",
+								"description": "Cloud computing is the on-demand delivery of IT resources.",
+								"pathname": "/cloud-computing-and-servers/"
+							},
+							{
+								"title": "Servers",
+								"description": "Servers are the backbone of the cloud computing infrastructure.",
+								"pathname": "/client-devices/"
+							}
+						]
+					}
+				]
+			}
 		},
 		{
 			"title": "Membership",
