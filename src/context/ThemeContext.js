@@ -4,13 +4,11 @@ import { lightTheme, darkTheme } from '@styles/theme';
 import { useLocalStorage } from '@lib/hooks';
 
 const DARK_SCHEME_QUERY = '(prefers-color-scheme: dark)';
-
 const ThemeContext = createContext({});
 const useThemeContext = () => useContext(ThemeContext);
 
 const ThemeProvider = ({ children }) => {
 	const isDarkOS = useMediaQuery(DARK_SCHEME_QUERY);
-
 	const [themeMode, setThemeMode] = useLocalStorage('themeMode', isDarkOS ? 'light' : 'dark');
 	function setClassOnDocumentBody(mode) {
 		let classNameDark = 'dark';
@@ -28,7 +26,6 @@ const ThemeProvider = ({ children }) => {
 			setThemeMode('light');
 		}
 	};
-
 	return (
 		<ThemeContext.Provider value={{ themeMode, toggleTheme }}>
 			<MuiThemeProvider theme={themeMode === 'light' ? lightTheme : darkTheme}>
