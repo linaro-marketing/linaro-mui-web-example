@@ -14,7 +14,12 @@ require('dotenv').config({
 
 console.log(`Current Environment: ${process.env.BUILD_ENV}`);
 console.log(`Current Site URL: ${process.env.NEXT_PUBLIC_SITE_URL}`);
-module.exports = removeImports({
+// @ts-check
+
+/**
+ * @type {import('next').NextConfig}
+ **/
+const nextConfig = removeImports({
 	webpack: function (config) {
 		config.resolve.alias = {
 			...config.resolve.alias,
@@ -44,3 +49,5 @@ module.exports = removeImports({
 	// has uploaded them.
 	productionBrowserSourceMaps: true,
 });
+
+module.exports = nextConfig;
