@@ -6,6 +6,7 @@ import { createCanonical } from '@lib/seo';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
 import nav from '@content/data/nav';
+import { useThemeContext } from '@linaro-marketing/linaro-mui-web';
 
 /**
  * Default Layout component
@@ -14,6 +15,8 @@ import nav from '@content/data/nav';
  */
 const Layout = (props) => {
 	const { content, title, description, image, pageId, language, dataPayload } = props;
+	const { themeMode, toggleTheme } = useThemeContext();
+
 	let openGraphDetails = {
 		type: 'website',
 		url: createCanonical(pageId, language),
@@ -60,7 +63,13 @@ const Layout = (props) => {
 			{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
 			<CssBaseline />
 			<Box sx={{ display: 'flex', minHeight: '100vh', flexDirection: 'column' }}>
-				<Navbar logoLink={'/'} logo={'/static/logo.svg'} pages={nav.pages} />
+				<Navbar
+					logoLink={'/'}
+					logo={'/static/logo.svg'}
+					pages={nav.pages}
+					toggleTheme={toggleTheme}
+					themeMode={themeMode}
+				/>
 				<Box
 					component="main"
 					sx={[
@@ -81,7 +90,7 @@ const Layout = (props) => {
 export default Layout;
 
 Layout.propTypes = {
-	children: PropTypes.node.isRequired,
+	children: PropTypes.node,
 	title: PropTypes.string,
 	description: PropTypes.string,
 	image: PropTypes.string,
