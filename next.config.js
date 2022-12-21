@@ -1,6 +1,6 @@
 const removeImports = require('next-remove-imports')();
 const fs = require('fs');
-var path = require('path');
+const path = require('path');
 
 // Load in the correct variables for the specified environment.
 require('dotenv').config({
