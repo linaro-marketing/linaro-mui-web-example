@@ -1,9 +1,9 @@
 /**
  @module Language
 */
-import { languages, defaultLanguage } from '@i18n/config';
+import { languages, defaultLanguage } from '../i18n/config';
 import i18next from 'i18next';
-import { detectionOptions } from '@i18n/init';
+import { detectionOptions } from '../i18n/init';
 /**
  * Fetch the current languages which are supported by the app.
  * @function

@@ -1,12 +1,12 @@
 import React from 'react';
 import ProgressBar from '@badrap/bar-of-progress';
 import Router from 'next/router';
-import { CustomSnackbarProvider, ThemeProvider } from '@linaro-marketing/linaro-mui-web';
-import '@styles/global.css';
+import { CustomSnackbarProvider, ThemeProvider } from '/home/delara/linaro-mui-web';
+import '../styles/global.css';
 import createCache from '@emotion/cache';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
-import { darkTheme, lightTheme } from '@styles/theme';
+import { darkTheme, lightTheme } from '../styles/theme';
 const clientSideEmotionCache = createCache({ key: 'css', prepend: true });
 const App = function ({ Component, pageProps, emotionCache = clientSideEmotionCache }) {
 	const notistackRef = React.createRef();

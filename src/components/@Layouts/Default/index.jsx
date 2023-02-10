@@ -2,10 +2,10 @@ import Head from 'next/head';
 import { Navbar, Seo } from '@linaro-marketing/linaro-mui-web';
 import React, { useEffect } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
-import { createCanonical } from '@lib/seo';
+import { createCanonical } from '../../../lib/seo';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import nav from '@content/data/nav';
+import nav from '../../../../content/data/nav.json';
 import { useThemeContext } from '@linaro-marketing/linaro-mui-web';
 
 /**
@@ -80,8 +80,11 @@ const Layout = (props) => {
 						},
 					]}
 				>
+					
+					testttttt
 					{/* <FlowWrapper content={content} dataPayload={dataPayload} /> */}
 				</Box>
+		
 				{/* <Footer /> */}
 			</Box>
 		</>

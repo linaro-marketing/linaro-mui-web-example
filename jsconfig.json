@@ -26,6 +26,6 @@
 			"react": ["./node_modules/react"]
 		}
 	},
-	"include": ["**/*.jsx", "**/*.js"],
+	"include": ["**/*.jsx", "**/*.js", "next.config.js"],
 	"exclude": ["node_modules"]
 }

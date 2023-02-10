@@ -1,4 +1,4 @@
-import { defaultLanguage, languages } from '@i18n/config';
+import { defaultLanguage, languages } from '../i18n/config';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
